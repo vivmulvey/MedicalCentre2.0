@@ -31,5 +31,42 @@ class UsersTableSeeder extends Seeder
       $user->password = bcrypt('secret');
       $user->save();
       $user->roles()->attach($role_user);
+
+      $user = new User();
+      $user->name = 'Andy Ryan';
+      $user->email = 'andyR@medicalcentre.ie';
+      $user->password = bcrypt('secret');
+      $user->save();
+      $user->roles()->attach($role_user);
+
+      $user = new User();
+      $user->name = 'Mary Smith';
+      $user->email = 'marysmith@medicalcentre.ie';
+      $user->password = bcrypt('secret');
+      $user->save();
+      $user->roles()->attach($role_user);
+
+      $user = new User();
+      $user->name = 'Sam Kenny';
+      $user->email = 'skenny@medicalcentre.ie';
+      $user->password = bcrypt('secret');
+      $user->save();
+      $user->roles()->attach($role_user);
+
+      $user = new User();
+      $user->name = 'Laura Glynn';
+      $user->email = 'lglynn@medicalcentre.ie';
+      $user->password = bcrypt('secret');
+      $user->save();
+      $user->roles()->attach($role_user);
+
+
+      $user = new User();
+      $user->name = 'Jane Lynch';
+      $user->email = 'janelynch@medicalcentre.ie';
+      $user->password = bcrypt('secret');
+      $user->save();
+      $user->roles()->attach($role_user);
+
     }
 }
