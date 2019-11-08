@@ -15,11 +15,13 @@ class UsersTableSeeder extends Seeder
     {
       $role_admin = Role::where('name', 'admin')->first();
       $role_user = Role::where('name', 'user')->first();
+      $role_doctor = Role::where('name', 'doctor')->first();
+      $role_patient = Role::where('name', 'patient')->first();
 
       //User Model - Admin
       $admin = new User();
-      $admin->name = 'Mo Che';
-      $admin->email = 'admin1@medicalcentre.ie';
+      $admin->name = 'Viv';
+      $admin->email = 'viv@medicalcentre.ie';
       $admin->password = bcrypt('secret');
       $admin->save();
       $admin->roles()->attach($role_admin);
@@ -46,27 +48,24 @@ class UsersTableSeeder extends Seeder
       $user->save();
       $user->roles()->attach($role_user);
 
-      $user = new User();
-      $user->name = 'Sam Kenny';
-      $user->email = 'skenny@medicalcentre.ie';
-      $user->password = bcrypt('secret');
-      $user->save();
-      $user->roles()->attach($role_user);
+      //User Model - Doctor
+      $doctor = new User();
+      $doctor->name = 'Sam Kenny';
+      $doctor->email = 'skenny@medicalcentre.ie';
+      $doctor->password = bcrypt('secret');
+      $doctor->save();
+      $doctor->roles()->attach($role_doctor);
 
-      $user = new User();
-      $user->name = 'Laura Glynn';
-      $user->email = 'lglynn@medicalcentre.ie';
-      $user->password = bcrypt('secret');
-      $user->save();
-      $user->roles()->attach($role_user);
+      //User Model - Patient
+      $patient = new User();
+      $patient->name = 'Laura Glynn';
+      $patient->email = 'lglynn@medicalcentre.ie';
+      $patient->password = bcrypt('secret');
+      $patient->save();
+      $patient->roles()->attach($role_patient);
 
 
-      $user = new User();
-      $user->name = 'Jane Lynch';
-      $user->email = 'janelynch@medicalcentre.ie';
-      $user->password = bcrypt('secret');
-      $user->save();
-      $user->roles()->attach($role_user);
+
 
     }
 }
