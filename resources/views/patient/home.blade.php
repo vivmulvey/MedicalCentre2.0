@@ -9,12 +9,22 @@
 
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
                     @endif
 
+
+                    Hi , {{Auth::user()->name}}
+
+                    </br>
+
                     You are logged in as a patient!
+
+                    </br>
+
+                    Insurance Policy Number: {{Auth::user()->patient->policy_number}}
+
                 </div>
             </div>
         </div>
