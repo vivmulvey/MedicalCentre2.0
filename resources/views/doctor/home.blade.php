@@ -14,7 +14,18 @@
                         </div>
                     @endif
 
-                    You are logged in as a doctor!
+                    Hi , {{Auth::user()->name}}
+
+                      </br>
+
+                      You are logged in as a doctor!
+
+                  </br>
+
+                  Expertise: {{Auth::user()->doctor->expertise}}
+
+
+
                 </div>
             </div>
         </div>
